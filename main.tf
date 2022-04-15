@@ -35,9 +35,8 @@ provider "aws" {
 #}
 #aws instance creation
 resource "aws_instance" "web_app" {
-  ami           = "ami-04505e74c0741db8d"
-  instance_type = "t2.medium"
-  subnet_id     = "subnet-01f7f9c5b9fc99986"
+  ami           = "ami-08ca3fed11864d6bb"
+  instance_type = "t2.micro"
   associate_public_ip_address = true
   key_name = "x19190638_balazs_barcza_NEW"
   vpc_security_group_ids = ["sg-0268ecbf418effd94"]
