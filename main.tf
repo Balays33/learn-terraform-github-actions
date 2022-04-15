@@ -25,7 +25,7 @@ provider "aws" {
  region = "eu-west-1"
 }
 
-resource "aws_instance" "app_TEST" {
+resource "aws_instance" "app_server" {
  ami = "ami-08ca3fed11864d6bb"
  instance_type = "t1.micro"
  key_name = "x19190638_balazs_barcza_NEW"
