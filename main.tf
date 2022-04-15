@@ -33,4 +33,3 @@ resource "aws_instance" "app_server" {
    Name = "x19190638_balazs_barcza_terraform"
  }
 }
-
