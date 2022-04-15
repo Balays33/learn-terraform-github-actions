@@ -21,10 +21,18 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-2"
+ profile = "default"
+ region = "eu-west-1"
 }
 
-resource "random_pet" "sg" {}
+resource "aws_instance" "app_TEST" {
+ ami = "ami-08ca3fed11864d6bb"
+ instance_type = "t1.micro"
+ key_name = "x19190638_balazs_barcza_NEW"
+ tags = {
+   Name = "x19190638_balazs_barcza_terraform"
+ }
+}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
